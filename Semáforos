@@ -1,0 +1,42 @@
+import time
+
+tempo_aberto = 30 
+
+ruas = ["Rua A", "Rua B", "Rua C", "Rua A2"]
+
+# Status inicial dos semáforos
+semaforos = {
+    "Rua A": "Vermelho",
+    "Rua B": "Vermelho",
+    "Rua C": "Vermelho",
+    "Rua A2": "Verde"
+}
+
+
+while True:
+    # Rua A verde
+    semaforos["Rua A"] = "Verde"
+    semaforos["Rua B"] = "Vermelho"
+    semaforos["Rua C"] = "Vermelho"
+    print("Semaforo da Rua A está Verde. Outros estão Vermelhos.")
+    print(f"Semáforos: {semaforos}")
+    time.sleep(tempo_aberto) # 30s
+    semaforos["Rua A"] = "Vermelho"
+
+    # Rua B verde
+    semaforos["Rua A"] = "Vermelho"
+    semaforos["Rua B"] = "Verde"
+    semaforos["Rua C"] = "Vermelho"
+    print("Semaforo da Rua B está Verde. Outros estão Vermelhos.")
+    print(f"Semáforos: {semaforos}")
+    time.sleep(tempo_aberto) # 30s
+    semaforos["Rua B"] = "Vermelho"
+
+    # Rua C verde
+    semaforos["Rua A"] = "Vermelho"
+    semaforos["Rua B"] = "Vermelho"
+    semaforos["Rua C"] = "Verde"
+    print("Semaforo da Rua C está Verde. Outros estão Vermelhos.")
+    print(f"Semáforos {semaforos}")
+    time.sleep(tempo_aberto) # 30s
+

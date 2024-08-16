@@ -2,9 +2,7 @@ import time
 
 tempo_aberto = 30 
 
-ruas = ["Rua A", "Rua B", "Rua C", "Rua A2"]
 
-# Status inicial dos semáforos
 semaforos = {
     "Rua A": "Vermelho",
     "Rua B": "Vermelho",
